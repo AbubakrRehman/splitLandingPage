@@ -10,21 +10,29 @@ html {
 
 .container {
     display: flex;
-    border: 2px solid green;
+    /* border: 2px solid green; */
+
 }
 
 
 .split {
+
     flex-grow: 1;
     /* border: 2px solid red; */
     height: 100vh;
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1;
+    transition: flex-grow 1s ease;
 }
 
 .left {
     background-image: url("https://images.immediate.co.uk/production/volatile/sites/3/2020/08/playstation-5-77d37a0.jpg?quality=90&webp=true&resize=1200,800");
     background-repeat: no-repeat;
     background-size: cover;
-    flex-grow: 7;
+   display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -32,11 +40,53 @@ html {
     background-image: url("https://i.ytimg.com/vi/0tUqIHwHDEc/maxresdefault.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    flex-grow: 7;
+    flex-grow: 1;
 }
 
 
 h1,
 a {
     color: white;
+    /* border: 2px solid green; */
+}
+
+.left::before {
+    content: "";
+    background-color: rgb(32, 85, 146);
+    position: absolute;
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+}
+
+h1 {
+    position: absolute;
+    font-size: 45px;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  
+
+}
+
+.btn {
+    position: absolute;
+    font-size: 25px;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 10px;
+    text-transform: capitalize;
+    white-space: nowrap;
+
+}
+
+.split:hover{
+    flex-grow: 7;
+    /* cursor: pointer; */
 }
