@@ -1,0 +1,2 @@
+1> this project has been created without use of js and only css.
+2> bt can be made the other way also.
